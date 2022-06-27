@@ -11,10 +11,6 @@
 }
 
 .topHeaderContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-
   width: 100%;
 }
 
@@ -66,6 +62,12 @@
   font-feature-settings: 'pnum' on, 'lnum' on;
 
   color: #ffffff;
+}
+
+.imageBorder {
+  border: 2px solid #5b5b5b;
+  margin: 24px 0;
+  width: 100%;
 }
 
 .imageText {

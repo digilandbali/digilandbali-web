@@ -181,9 +181,9 @@
 }
 
 .titleBorder {
-  width: 100%;
   border: 2px solid #5b5b5b;
   margin: 24px 0;
+  float: right;
 }
 
 .subtitleWrapper {
