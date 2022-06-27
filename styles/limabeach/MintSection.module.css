@@ -71,7 +71,7 @@
   height: 48px;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 921px) {
   .root {
     display: flex;
     flex-direction: column;
@@ -83,9 +83,8 @@
   .stepsContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1em;
-    max-width: 100%;
+    align-items: flex-start;
+    gap: 16px;
   }
 
   .descContainer {
@@ -116,7 +115,6 @@
     flex-direction: row-reverse;
 
     gap: 1em;
-    max-width: 632px;
   }
 }
 

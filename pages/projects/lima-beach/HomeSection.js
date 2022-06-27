@@ -50,13 +50,13 @@ const HomeSection = () => {
     >
       <div className="w-full flex flex-col gap-1 items-center tablet:items-center desktop:flex desktop:flex-row desktop:gap-14 desktop:justify-end">
         <div>
-          <h1 className={styles.titleBig}>
+          <div className={sharedStyles.sectionTitleBig}>
             LIMA BEACH
             <br />
             SIGNATURE NFT<span className={sharedStyles.titleDot}>.</span>
-          </h1>
+          </div>
         </div>
-        <div className={styles.subtitle}>
+        <div className={sharedStyles.description}>
           A limited-edition NFT represents the physical property certificate and physical property
           ownership built with the Internet of Things (IoT) Technology and Web 3.0.
         </div>

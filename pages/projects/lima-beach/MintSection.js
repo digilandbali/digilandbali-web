@@ -1,27 +1,48 @@
-import {FirstIcon, SecondIcon, ThirdIcon} from '../../../src/components/icons/FacilityIcons';
-import styles from '../../../styles/limabeach/MintSection.module.css';
-import sharedStyles from '../../../styles/limabeach/SharedStyles.module.css';
+import {useRef} from 'react';
+import {animated} from 'react-spring';
+
+import {borderWidth, fadeIn, fadeInUpText} from 'src/animation';
+import {FirstIcon, SecondIcon, ThirdIcon} from 'src/components/icons/FacilityIcons';
+import useIntersectionObserver from 'src/hooks/useIntersectionObserver';
+import styles from 'styles/limabeach/MintSection.module.css';
+import sharedStyles from 'styles/limabeach/SharedStyles.module.css';
 
 const MintSection = () => {
+  const triggerRef = useRef();
+  const dataRef = useIntersectionObserver(triggerRef, {});
+  const visible = dataRef?.isIntersecting;
+
   return (
     <>
       <div className={styles.root}>
         <div className={styles.headerContainer}>
-          <div className="w-full">
-            <h1 className={sharedStyles.sectionTitleBig}>
-              How to Mint<span className={sharedStyles.titleDot}>.</span>
-            </h1>
-            <div className={sharedStyles.titleBorder}></div>
+          <div className="w-full overflow-hidden">
+            <animated.div
+              className={sharedStyles.sectionTitleBig}
+              ref={triggerRef}
+              style={fadeInUpText(visible)}
+            >
+              <div className={sharedStyles.sectionTitleBig}>
+                How to Mint<span className={sharedStyles.titleDot}>.</span>
+              </div>
+            </animated.div>
+            <div className="w-full inline-block">
+              <animated.div
+                className={sharedStyles.titleBorder}
+                ref={triggerRef}
+                style={borderWidth(visible)}
+              ></animated.div>
+            </div>
           </div>
         </div>
         <div className={styles.descContainer}>
-          <div className={styles.detailContainer}>
+          <animated.div className={styles.detailContainer} ref={triggerRef} style={fadeIn(visible)}>
             <img
               src={'/NFTInvest.svg'}
               className={sharedStyles.responsive}
               alt="How to mint illustration"
             />
-          </div>
+          </animated.div>
           <div className={styles.stepsContainer}>
             <div className={styles.detailContainer}>
               <div className={styles.stepHeaderContainer}>
