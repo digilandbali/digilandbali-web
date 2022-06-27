@@ -1,23 +1,44 @@
-import styles from '../../../styles/limabeach/NFTFragmentSection.module.css';
-import sharedStyles from '../../../styles/limabeach/SharedStyles.module.css';
+import {useRef} from 'react';
+import {animated} from 'react-spring';
+
+import {borderWidth, fadeIn, fadeInUpText} from 'src/animation';
+import useIntersectionObserver from 'src/hooks/useIntersectionObserver';
+import styles from 'styles/limabeach/NFTFragmentSection.module.css';
+import sharedStyles from 'styles/limabeach/SharedStyles.module.css';
 
 const NFTFragmentSection = () => {
+  const triggerRef = useRef();
+  const dataRef = useIntersectionObserver(triggerRef, {});
+  const visible = dataRef?.isIntersecting;
+
   return (
     <div className={`${styles.root} ${sharedStyles.flexOrder8}`}>
-      <div className="w-full">
-        <h1 className={sharedStyles.sectionTitleBig}>
-          Lima Beach NFT Fragments<span className={sharedStyles.titleDot}>.</span>
-        </h1>
-        <div className={sharedStyles.titleBorder}></div>
+      <div className="w-full overflow-hidden">
+        <animated.div
+          className={sharedStyles.sectionTitleBig}
+          ref={triggerRef}
+          style={fadeInUpText(visible)}
+        >
+          <div className={sharedStyles.sectionTitleBig}>
+            Lima Beach NFT Fragments<span className={sharedStyles.titleDot}>.</span>
+          </div>
+        </animated.div>
+        <div className="w-full inline-block">
+          <animated.div
+            className={sharedStyles.titleBorder}
+            ref={triggerRef}
+            style={borderWidth(visible)}
+          ></animated.div>
+        </div>
       </div>
       <div className={styles.imageDescContainer}>
-        <div className={styles.imageContainer}>
+        <animated.div className={styles.imageContainer} ref={triggerRef} style={fadeIn(visible)}>
           <img
             src={'/image-removebg-preview_1_1.svg'}
             className={sharedStyles.responsive}
             alt="NFT Fragment image illustration"
           />
-        </div>
+        </animated.div>
         <div className={styles.imageDescTextContainer}>
           <h1 className={styles.descTitle}>
             7 NFT fragments would equal 1 luxury service apartment with a 58-years leasehold.
