@@ -1,20 +1,42 @@
-import sharedStyles from '../../../styles/limabeach/SharedStyles.module.css';
-import styles from '../../../styles/limabeach/UtilityNFTSection.module.css';
+import {useRef} from 'react';
+import {animated} from 'react-spring';
+
+import {borderWidth, fadeIn, fadeInUpText} from 'src/animation';
+import useIntersectionObserver from 'src/hooks/useIntersectionObserver';
+import sharedStyles from 'styles/limabeach/SharedStyles.module.css';
+import styles from 'styles/limabeach/UtilityNFTSection.module.css';
 
 const UtilityNFTSection = () => {
+  const triggerRef = useRef();
+  const dataRef = useIntersectionObserver(triggerRef, {});
+  const visible = dataRef?.isIntersecting;
+
   return (
     <>
       <div
         className={`${sharedStyles.flexColumnStartContainer} ${sharedStyles.flexOrder2} ${styles.root}`}
       >
-        <div className={sharedStyles.sectionTitleBig}>
-          Decentralized NFT Developer Property with Apartments as Utility
-          <span className={sharedStyles.titleDot}>.</span>
+        <div className="overflow-hidden">
+          <animated.div
+            className={sharedStyles.sectionTitleBig}
+            ref={triggerRef}
+            style={fadeInUpText(visible)}
+          >
+            Decentralized NFT Developer Property with Apartments as Utility
+            <span className={sharedStyles.titleDot}>.</span>
+          </animated.div>
         </div>
-        <div className={sharedStyles.titleBorder}></div>
-        <div className={styles.imageDimension}>
+        <div className="w-full inline-block">
+          <animated.div
+            className={sharedStyles.titleBorder}
+            ref={triggerRef}
+            style={borderWidth(visible)}
+          ></animated.div>
+        </div>
+
+        <animated.div className={styles.imageDimension} ref={triggerRef} style={fadeIn(visible)}>
           <img src={'/Videopreview.svg'} alt="video preview" />
-        </div>
+        </animated.div>
         <div className="flex flex-col items-start gap-[32px] w-full h-auto">
           <div className={styles.descContainer}>
             <div className={styles.descInnerContainer}>
