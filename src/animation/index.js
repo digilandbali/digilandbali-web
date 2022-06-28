@@ -73,7 +73,7 @@ export const imageWidth = visible =>
     },
     delay: 100,
     config: {
-      duration: 3000,
+      duration: 500,
       easing: easings.easeOutQuint,
     },
   });
