@@ -1,11 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const NavbarComponent = ({onConnect, walletAddress}) => {
   return (
     <nav id="navbar">
       <div id="logo">
-        <Image src="/Digiland_Symbol.svg" width={27} height={27} alt="Digiland-logo" />
+        <img src="/Digiland_Symbol.svg" width={27} height={27} alt="Digiland-logo" />
       </div>
 
       <div className="link">

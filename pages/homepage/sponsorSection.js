@@ -2,8 +2,6 @@
 import {useRef} from 'react';
 import {animated} from 'react-spring';
 
-import Image from 'next/image';
-
 import {fadeIn} from '../../src/animation';
 import useIntersectionObserver from '../../src/hooks/useIntersectionObserver';
 import styles from '../../styles/SponsorSection.module.css';

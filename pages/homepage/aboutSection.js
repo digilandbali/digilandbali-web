@@ -2,8 +2,6 @@
 import {useRef} from 'react';
 import {animated} from 'react-spring';
 
-import Image from 'next/image';
-
 import {fadeIn, imageWidth} from '../../src/animation';
 import HomeTitleSection from '../../src/components/HomeTitleSection';
 import ImageDescComponent from '../../src/components/ImageDescComponent';
