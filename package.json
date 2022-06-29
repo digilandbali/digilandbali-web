@@ -1,13 +1,14 @@
 {
-  "name": "digiland-fe",
+  "name": "digilandbali-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install"
+    "lint": "next lint"
   },
   "dependencies": {
     "@alch/alchemy-web3": "^1.4.2",

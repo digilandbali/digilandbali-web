@@ -1,0 +1,26 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "**/.*",
+      "**/node_modules/**",
+      "firebase.json",
+      "jsconfig.json",
+      "next.config.json",
+      "postcss.config.json",
+      "tailwind.config.json",
+      "pages",
+      "public",
+      "src",
+      "styles"
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}
