@@ -40,8 +40,8 @@ const HomeSection = () => {
         >
           <div className={styles.title}>NFT Developer Property</div>
           <div className={styles.subtitle}>
-            Build decentralized property with developer price on Bali, build with community for
-            community
+            Build decentralized property blockchain at developer prices in Bali ― To Build With And
+            For The Community.
           </div>
         </animated.div>
         <div ref={triggerAnimation.floatTextLeft}></div>
@@ -53,10 +53,9 @@ const HomeSection = () => {
           style={fadeInRight(visibleAnimation.floatTextRight)}
           ref={triggerAnimation.floatTextRight}
         >
-          <div className={styles.title}>NFT Developer Property</div>
+          <div className={styles.title}>Apartment and Skyvillas</div>
           <div className={styles.subtitle}>
-            Build decentralized property with developer price on Bali, build with community for
-            community
+            Own NFT property in Canggu, Bali with Smart Technology and 60 years of service for free.
           </div>
         </animated.div>
       </div>

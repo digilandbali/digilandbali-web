@@ -38,9 +38,10 @@ const FragmentSection = () => {
           ref={triggerAnimation.subtitle}
           style={fadeIn(visibleAnimation.subtitle)}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nunc tortor proin
-          adipiscing lacus augue gravida et. Vulputate nunc tortor proin adipiscing lacus augue
-          gravida et.
+          When you buy the NFT, you are not merely buying a NFT or a provably-rare piece of art.
+          With an exclusive high-end service that offers growing advantages over time, you are
+          obtaining physical property ownership. Stay tuned, we will reveal upcoming fragment
+          collection sooner than you think.
         </animated.div>
       </div>
       <animated.div

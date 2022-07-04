@@ -50,7 +50,13 @@ const HomeTitleSection = ({
                   <img src={imageURL} className={styles.image} alt={imageAlt} />
                 </div>
               ) : null}
-              <div className={styles.miniText}>{miniText}</div>
+              <div
+                className={`${styles.miniText} ${
+                  imageURL ? 'desktop:text-[14px]' : 'desktop:text-[16px]'
+                }`}
+              >
+                {miniText}
+              </div>
             </div>
             <div className={styles.right}>{descText}</div>
           </div>

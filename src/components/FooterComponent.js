@@ -66,8 +66,8 @@ const FooterComponent = () => {
           <div className={styles.inner}>
             <label className={styles.title}>Contact</label>
             <div className="flex flex-col tablet:gap-4">
-              <label className={styles.link}>Digilandbali, Canggu Avenue, Bali, Indonesia</label>
-              <label className={styles.link}>info@digilandbali.io</label>
+              <label className={styles.link}>Properblock, Canggu Avenue, Bali, Indonesia</label>
+              <label className={styles.link}>info@properblock.io</label>
             </div>
           </div>
         </div>
@@ -77,11 +77,11 @@ const FooterComponent = () => {
           <label className={`text-left mr-1 ${styles.link}`}>Verified Contract: </label>
           <a
             className={styles.link}
-            href="https://rinkeby.etherscan.io/address/0x3a0508AF8eCDE61C99083Fbb263d6a99BFe05eCe"
+            href="https://rinkeby.etherscan.io/address/0x7a4d1b54dd21dde804c18b7a830b5bc6e586a7f6s"
             target="_blank"
             rel="noopener noreferrer"
           >
-            0x3a0508AF8eCDE61C99083Fbb263d6a99BFe05eCe
+            0x7a4d1b54dd21dde804c18b7a830b5bc6e586a7f6s
           </a>
         </div>
         <div className={`${styles.contactIcons} ${styles.bottom}`}>

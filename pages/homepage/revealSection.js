@@ -38,9 +38,8 @@ const RevealSection = () => {
           ref={triggerAnimation.subtitle}
           style={fadeIn(visibleAnimation.subtitle)}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nunc tortor proin
-          adipiscing lacus augue gravida et. Vulputate nunc tortor proin adipiscing lacus augue
-          gravida et.
+          Watch this space if you want to get your hands on one of these exclusive NFT drops, we
+          could announce the first one tomorrow.
         </animated.div>
       </div>
       <animated.div

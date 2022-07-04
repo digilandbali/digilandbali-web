@@ -48,10 +48,10 @@ const AboutSection = () => {
           type={'leftImage'}
           topLeftText={'Who'}
           topRightText={'Digilandbali, NFT Developer Property'}
-          imageURL={'/image3.svg'}
+          imageURL={'/image8.svg'}
           imageAlt={'tes'}
           miniText={'One of the properties that has been built by the developer group'}
-          descText={`Digilandbali built by Blockchain Consultant Experts who have handled various projects for 10+ Years, One of Bali's top property developer with 20+ years experience who has built hotels and resorts like Agra Nusa Villas, The Nest in Benoa The Sapphire Cliff Resort and Umalas Signature, and the property will be maintained by world's top hospitality management with 25+ years experience.`}
+          descText={`Digilandbali is built by a team of Blockchain Consultant Experts with over a decade of experience. Being one of Bali's most reputable property developers with over 20 years of expertise, they have also built hotels and other properties including Agra Nusa Villas and the Nest in Benoa, as well as the Sapphire Cliff Resort and Umalas Signature. In particular, the NFT property will be maintained by a world-class management team with more than 25 years of experience.`}
         />
       </div>
       <div className="pb-20 tablet:pb-32">
@@ -69,18 +69,17 @@ const AboutSection = () => {
           imageAlt="Tes"
           title={`Get your fragments, Get your apartments, Live up your investments`}
           description={
-            'Digilandbali is on a mission to make everyone become a property developer where everyone can get a property with a developer price instead of market selling price because the property project was built together. Reducing the cost burden on property developers while providing a high quality of luxury service property to leaseholders with a developer costs. We Build Together, We Own Together.'
+            'Digilandbali is on a mission by adding value to daily lives of the community by hoping to get more people to involved in property with developer price, giving the NFT owners to stake our NFT apartments for more profitable rental as well as providing Smart 4.0 hospitality system technology. Because, together, we strive to build the NFT property by reducing the financial burden on property developers while yet offering high-end, luxurious services to leaseholders. ―We Build Together, We Own Together.'
           }
         />
       </div>
       <div className="pb-20 tablet:pb-32">
         <animated.div
-          className="relative w-full hidden desktop:block"
+          className="relative w-full hidden tablet:block"
           style={imageWidth(visibleAnimation.imgLeft)}
           ref={triggerAnimation.imgLeft}
         >
           <img src={'/image5.svg'} className="w-full h-auto" alt={'tes'} />
-          <div className="text-base text-[#E2E2E2] pt-2 fontFeature">Fragment</div>
         </animated.div>
         <animated.div
           className="tablet:py-8"
@@ -123,12 +122,11 @@ const AboutSection = () => {
           </div>
         </animated.div>
         <animated.div
-          className="relative w-full hidden desktop:block ml-auto"
+          className="relative w-full hidden tablet:block ml-auto"
           style={imageWidth(visibleAnimation.imgRight)}
           ref={triggerAnimation.imgRight}
         >
           <img src={'/image6.svg'} className="w-full h-auto" alt={'tes'} />
-          <div className="text-base text-[#E2E2E2] text-right pt-2 fontFeature">Fragment</div>
         </animated.div>
       </div>
       <div className="pb-20 tablet:pb-32">
@@ -137,7 +135,7 @@ const AboutSection = () => {
           topLeftText={'What'}
           topRightText={'Digilandbali 1st Project: \nLima Beach Signature NFT'}
           miniText={'On a mission to make everyone\nbecome a property developer'}
-          descText={`We’re bringing together the brightest minds and makers in NFTs-sphere. We dance the cutting edge, we challange the status quo, and we care deeply about giving developers around the globe the product they need to unlock a new world of NFT-enabled possibillities.`}
+          descText={`Digilandbali develops the next-level NFT concept, in which our NFTs are backed by a tangible asset that will grow in value over time. The NFT has utility and strong physical apartment fundamentals. Lima Beach Signature NFT is Digilandbali's first decentralized property blockchain project. Each Lima Beach Signature NFT symbolizes the physical ownership of an apartment in Pantai Lima, Canggu, and Bali, which leaseholders can use for living. While the Lima Beach Signature's physical properties are all luxury service smart apartments that employ IoT technology.`}
         />
       </div>
       <div className="pb-20 tablet:pb-32">
@@ -146,7 +144,7 @@ const AboutSection = () => {
           imageAlt="Tes"
           title={`Mint 7 NFT Fragment \nGet 1 Apartment as Utility`}
           description={
-            '\nDigilandbali is on a mission to make everyone become a property developer where everyone can get a property with a developer price instead of market selling price because the property project was built together. Reducing the cost burden on property developers while providing a high quality of luxury service property to leaseholders with a developer costs. We Build Together, We Own Together.'
+            'One NFT Fragment will be worth 1/7 of the apartment leasehold. When enough of these fragments are collected, they can be fused together. A leaseholder would need seven NFT fragments to make one NFT Apartment or one NFT Skyvilla, which would give them a whole leasehold. 7 NFT fragments would be equal to 1 luxury service apartment with a 58-year leasehold and FREE costs for operating or living there. As the number of NFTs minted increases at each stage, so does their price.'
           }
         />
       </div>
@@ -156,7 +154,7 @@ const AboutSection = () => {
           imageURL={'/image4.svg'}
           topLeftText={'Where'}
           topRightText={'Lima Beach Canggu, Bali, Indonesia'}
-          descText={`We’re bringing together the brightest minds and makers in NFTs-sphere. We dance the cutting edge, we challange the status quo, and we care deeply about giving developers around the globe the product they need to unlock a new world of NFT-enabled possibillities.`}
+          descText={`It is the ideal place to spend a seaside holiday. Enjoy its luscious green rice fields that sway in the wind, spectacular vistas of Mount Batukaru, magical sunsets across Pantai Lima Beach, and the sound of the ocean. Is it your dream to be a part of it , and feels the beautiful magic of Bali?`}
         />
       </div>
       <div className="pb-20 tablet:pb-32">
@@ -164,34 +162,38 @@ const AboutSection = () => {
           type={'topImage'}
           topLeftText={'When'}
           topRightText={'Minting Starts in July 2022'}
-          descText={`We’re bringing together the brightest minds and makers in NFTs-sphere. We dance the cutting edge, we challange the status quo, and we care deeply about giving developers around the globe the product they need to unlock a new world of NFT-enabled possibillities.`}
+          descText={`Only 1771 NFT Fragments will ever be created. Indulge in on going priority, special perks, real utility and benefits. The first public mint will begin in July 2022, followed by stage two in October 2022, stage three in January 2023, and stage four in June 2023.`}
         />
       </div>
       <div className="tablet:pb-80 desktop:pb-64">
         <HomeTitleSection
           type={'custom'}
           topLeftText={'How'}
-          topRightText={'Section about how it’s built from minting till become apartments'}
+          topRightText={'How it’s built from minting till become apartments.'}
         >
           <div className="tablet:flex text-start desktop:items-center relative">
-            <div className="w-[40%] tablet:w-[25%] desktop:w-[60%] float-left">
-              <div className="desktop:relative max-w-[195px] desktop:max-w-[380px] mr-[15px] tablet:mr-0">
+            <div className="w-full tablet:w-[30%] desktop:w-[60%] float-left">
+              <div className="desktop:relative max-w-full desktop:max-w-[380px] mr-[15px] tablet:mr-0 hidden tablet:block">
                 <img
                   src={'/image7.svg'}
-                  className="w-full h-auto max-w-[195px] desktop:max-w-[380px]"
+                  className="w-full h-auto max-w-[195px] desktop:max-w-[380px] "
                   alt={'tes'}
                 />
               </div>
             </div>
-            <div className="w-[100%] tablet:w-[75%] desktop:w-[40%] tablet:pl-[105px] desktop:pl-0">
-              <div className="text-[12px] tablet:text-sm leading-[140%] dekstop:text-2xl desktop:leading-9 text-[#FFF] text-justify">
-                We’re bringing together the brightest minds and makers in NFTs-sphere. We dance the
-                cutting edge, we challange the status quo, and we care deeply about giving
-                developers around the globe the product they need to unlock a new world of
-                NFT-enabled possibillities.
+            <div className="w-[100%] tablet:w-[70%] desktop:w-[40%] tablet:pl-[80px] desktop:pl-[105px] desktop:pl-0 mb-5 tablet:mb-0">
+              <div className="text-[12px] tablet:text-sm leading-[140%] dekstop:text-2xl text-[#FFF] text-justify">
+                One NFT Apartment or SkyVilla can be formed by combining all 7 NFT Fragments through
+                4-stage. Each stage's fragments will have a distinct possibility of obtaining a
+                SkyVilla. As there are only 3 NFT SkyVillas out of 253 units of Apartments, people
+                with 7 NFT fragments on the most recent stage have a better chance of gaining
+                Skyvilla through the last stage—Fusion.
               </div>
             </div>
-            <div className="w-full mt-[50px] tablet:mt-0 tablet:max-w-[380px] relative tablet:absolute bg-[#3F7DF4] text-[#FFF] p-6 tablet:top-[75%] tablet:left-[15%] desktop:top-[50%] desktop:left-[20%]">
+            <div className="block tablet:hidden">
+              <img src={'/image9.svg'} className="w-full h-auto " alt={'tes'} />
+            </div>
+            <div className="w-full mt-[20px] tablet:mt-0 tablet:max-w-[380px] relative tablet:absolute bg-[#3F7DF4] text-[#FFF] p-6 tablet:top-[90%] tablet:left-[15%] desktop:top-[50%] desktop:left-[20%]">
               {stage.map((item, index) => {
                 return (
                   <div

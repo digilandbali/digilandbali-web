@@ -23,7 +23,7 @@ const ImageDescComponent = ({imageUrl, imageAlt, title, description}) => {
           <span className={styles.dot}>.</span>
         </animated.div>
       ) : null}
-      <div className="flex">
+      <div className="tablet:flex">
         <animated.div ref={triggerRef} style={fadeIn(visible)} className={styles.imageContainer}>
           <img src={imageUrl} className={styles.image} alt={imageAlt} />
         </animated.div>
