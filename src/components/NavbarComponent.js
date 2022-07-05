@@ -2,12 +2,15 @@ import {useEffect, useState} from 'react';
 
 import Link from 'next/link';
 
+import {connectWallet, getCurrentWalletConnected} from '../helpers/metamask-interact';
+
 import {ArrowDown2} from 'iconsax-react';
 
 const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
   const language = ['ENGLISH', 'MANDARIN', 'RUSSIA', 'VIETNAM'];
   const [openNavbar, setOpenNavbar] = useState(false);
   const [stickyClass, setStickyClass] = useState('');
+  const [pathname, setPathname] = useState([]);
 
   const closeNavbar = () => {
     setOpenNavbar(false);
@@ -16,6 +19,7 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
   useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
     window.addEventListener('resize', stickNavbar);
+    setPathname(window.location.pathname.split('/'));
     return () => {
       window.removeEventListener('scroll', stickNavbar);
       window.removeEventListener('resize', stickNavbar);
@@ -35,6 +39,7 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
 
   return (
     <div className={`nav-container ${stickyClass}`}>
+      {/* Desktop */}
       <nav className="h-[136px] max-w-[1280px] flex justify-between items-center desktop">
         <div id="logo" className="w-[25%]">
           <Link href="/">
@@ -88,11 +93,20 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
               })}
             </div>
           </div>
-          <button onClick={onConnect} className="">
-            <span>mint yours</span>
-          </button>
+          {pathname[1] != 'minting' ? (
+            <Link href="/minting/lima-beach" passHref>
+              <button>
+                <span>mint yours</span>
+              </button>
+            </Link>
+          ) : (
+            <button onClick={onConnect}>
+              <span>{!walletAddress ? 'connect wallet' : 'disconnect wallet'}</span>
+            </button>
+          )}
         </div>
       </nav>
+      {/* Tablet & Mobile */}
       <nav
         className={`h-[70px] tablet:h-[100px] flex justify-between items-center transition transition-colors duration-200 mobile ${
           openNavbar ? 'bg-[#050910]' : 'bg-transparent'
@@ -181,7 +195,7 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
               })}
             </div>
           </div>
-          <Link href="">
+          <Link href="/minting/lima-beach" passHref>
             <div onClick={() => closeNavbar()}>go to mint page</div>
           </Link>
         </div>
