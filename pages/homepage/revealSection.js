@@ -22,7 +22,7 @@ const RevealSection = () => {
 
   return (
     <section className="pb-20 tablet:pb-32">
-      <div className="pb-14">
+      <div className="pb-8 tablet:pb-14">
         <div className="overflow-hidden">
           <animated.div
             className="text-xl tablet:text-3xl desktop:text-5xl text-[#FFF] font-bold text-center pb-5"
