@@ -1,15 +1,18 @@
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 import {MinusCirlce, AddCircle, TickCircle, InfoCircle} from 'iconsax-react';
 import FAQComponent from 'src/components/FAQComponent';
 import SocialHandles from 'src/components/SocialHandles';
-import {mintDigilandNFT, connectWallet} from 'src/helpers/metamask-interact';
+import {mintDigilandNFT, connectWallet, approveUSDC} from 'src/helpers/metamask-interact';
+import useMintHook from 'src/hooks/use-mint.hooks';
 import styles from 'styles/ContentComponent.module.css';
 
 const ContentComponent = () => {
+  const {allowUSDC, isUSDCApproved, loading} = useMintHook();
+
   //TODO: add selector here from state management to read walletAddress
   const [walletAddress, setWalletAddress] = useState('');
 
@@ -20,8 +23,6 @@ const ContentComponent = () => {
   const [, setMintStatus] = useState('');
 
   const [isAgreed, setIsAgreed] = useState(false);
-
-  const [isUSDCAllowed, setIsUSDCAllowed] = useState(false);
 
   //TODO: fetch USDC balance from metamask
   const [balance] = useState(200_000);
@@ -72,8 +73,9 @@ const ContentComponent = () => {
   };
 
   const handleAllowUSDC = () => {
-    //TODO: perform USDCAllowance extrinsic using Metamask first
-    setIsUSDCAllowed(!isUSDCAllowed);
+    //TODO: change demoPrice to 10_000 USDC on mainnet version
+    const demoPrice = 10;
+    allowUSDC(quantity * demoPrice);
   };
 
   const isUSDCEnough = () => {
@@ -176,21 +178,30 @@ const ContentComponent = () => {
             {walletAddress.length > 0 ? (
               <>
                 <button
-                  className={isUSDCAllowed ? 'outlinedActive' : 'outlined'}
-                  disabled={isUSDCEnough() ? false : true}
+                  className={isUSDCApproved ? 'outlinedActive' : 'outlined'}
+                  disabled={loading ? true : isUSDCApproved ? true : false}
                   onClick={handleAllowUSDC}
                 >
-                  Allow to trade {(quantity * price).toLocaleString()} USDC
-                  {isUSDCAllowed ? (
-                    <TickCircle size="16" color="#76CE8A" />
-                  ) : (
-                    <InfoCircle size="16" color={isUSDCEnough() ? '#1F50FF' : '#bbcdfb'} />
-                  )}
+                  <>
+                    {loading ? (
+                      'Loading'
+                    ) : isUSDCApproved ? (
+                      <>
+                        Now you can trade USDC
+                        <TickCircle size="16" color="#76CE8A" />
+                      </>
+                    ) : (
+                      <>
+                        Allow to trade ${(quantity * price).toLocaleString()} USDC
+                        <InfoCircle size="16" color={isUSDCEnough() ? '#1F50FF' : '#bbcdfb'} />
+                      </>
+                    )}
+                  </>
                 </button>
                 <button
                   className="w-full"
                   onClick={handleMintPressed}
-                  disabled={quantity > 0 && isAgreed && isUSDCAllowed ? false : true}
+                  disabled={quantity > 0 && isAgreed && isUSDCApproved ? false : true}
                 >
                   <span>Mint Now</span>
                 </button>{' '}
