@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     environment: mainnet
+    env:
+      NEXT_PUBLIC_ALCHEMY_URL: '${{ secrets.NEXT_PUBLIC_ALCHEMY_URL }}'
+      NEXT_PUBLIC_LBSF_CONTRACT_ADDRESS: '${{ secrets.NEXT_PUBLIC_LBSF_CONTRACT_ADDRESS }}'
+      NEXT_PUBLIC_USDC_CONTRACT_ADDRESS: '${{ secrets.NEXT_PUBLIC_USDC_CONTRACT_ADDRESS }}'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
