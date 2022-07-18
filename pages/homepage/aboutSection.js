@@ -168,8 +168,8 @@ const AboutSection = () => {
         <HomeTitleSection
           type={'topImage'}
           topLeftText={'When'}
-          topRightText={'Minting Starts in July 2022'}
-          descText={`Only 1771 NFT Fragments will ever be created. Indulge in on going priority, special perks, real utility and benefits. The first public mint will begin in July 2022, followed by stage two in October 2022, stage three in January 2023, and stage four in June 2023.`}
+          topRightText={'Minting Starts in Q3 2022'}
+          descText={`Only 1771 NFT Fragments will ever be created. Indulge in on going priority, special perks, real utility and benefits. The first public mint will begin in Q3 2022, followed by stage two in Q4 2022, stage three in Q1 2023, and stage four in Q3 2023.`}
         />
       </div>
       <div className="pb-20 tablet:pb-80 desktop:pb-64">

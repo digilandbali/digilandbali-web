@@ -51,8 +51,8 @@ const HomeSection = () => {
           </div>
         </animated.div>
         <div ref={triggerAnimation.floatTextLeft}></div>
-        <div className={styles.imageMainContainer}>
-          <img src="/Home.svg" className={styles.imageMain} alt="HomePicture" />
+        <div className="w-full mb-8">
+          <img src="/Home/HeaderImage.png" className="w-[80%] h-auto mx-auto" alt="HomePicture" />
         </div>
         <animated.div
           className={`${styles.floatingTextContainer} ${styles.floatingText} ${styles.bottom}`}
