@@ -75,7 +75,7 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
         </div>
 
         <div className="w-[25%] flex justify-end items-center gap-4">
-          <div className="link dropdown-menu relative cursor-pointer mr-0">
+          {/* <div className="link dropdown-menu relative cursor-pointer mr-0">
             <div className="flex items-center gap-2">
               EN
               <div className="arrow">
@@ -91,7 +91,7 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
                 );
               })}
             </div>
-          </div>
+          </div> */}
           {pathname[1] != 'minting' ? (
             <Link href="/minting/lima-beach" passHref>
               <button disabled>
@@ -176,7 +176,7 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
               </Link>
             </div>
           </div>
-          <div>
+          {/* <div>
             <div>language</div>
             <div>
               {language.map((v, i) => {
@@ -192,7 +192,7 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
                 );
               })}
             </div>
-          </div>
+          </div> */}
           <Link href="/minting/lima-beach" passHref>
             <div onClick={e => e.preventDefault()} disabled>
               go to mint page

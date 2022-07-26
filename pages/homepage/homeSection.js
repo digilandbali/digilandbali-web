@@ -57,7 +57,7 @@ const HomeSection = () => {
         <div ref={triggerAnimation.floatTextLeft}></div>
         <div className="w-full mb-8">
           <img
-            src={isTab ? '/Home/HomeTab.png' : '/Home/HomeDesktop.png'}
+            src={isTab ? '/Home/Home-min.png' : '/Home/Home-min.png'}
             className="w-[80%] h-auto mx-auto"
             alt="HomePicture"
           />

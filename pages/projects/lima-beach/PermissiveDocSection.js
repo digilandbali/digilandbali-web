@@ -61,7 +61,7 @@ const PermissiveDocSection = () => {
         <div className="mb-4">
           Consequently, the SPV will store the certificate in the Safe Deposit Box for 60 years.
           Whereby, unlike any traditional complicated home sales activities, all NFT buyers can
-          cross-check the legal proof verified by a public notary!
+          cross-check the legal proof verified by a public notary.
         </div>
         <div className="mb-4 italic">
           *The SPV will have 30 years of leasehold rights for the first license, and the leasehold
@@ -79,7 +79,8 @@ const PermissiveDocSection = () => {
             NFT's smart contract includes a notarized leasehold agreement with an agreement number.
             All NFT buyers can cross-check legal proof with a notary for transparency. The NFT owner
             has 60 years to use the leasehold, according to the SPV. Address of 1 NFT Apartment
-            determines the leasehold rights. If the apartment NFT relocate, so do the lease rights.
+            determines the leasehold rights. If the apartment NFT relocate, so do the leasehold
+            rights.
           </div>
         </div>
         <div className="flex flex-col items-start min-w-full gap-4">

@@ -169,6 +169,12 @@
     font-size: 14px;
     line-height: 21px;
   }
+  .floatingTextContainer.top {
+    top: 20px;
+  }
+  .floatingTextContainer.bottom {
+    bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 677px) {

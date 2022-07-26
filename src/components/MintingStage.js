@@ -14,6 +14,7 @@ const MintingStage = ({
   border = true,
   cropImage = true,
   itemStart = false,
+  dot = true,
 }) => {
   const triggerRef = useRef();
   const dataRef = useIntersectionObserver(triggerRef, {});
@@ -28,7 +29,7 @@ const MintingStage = ({
           className={`${styles.title} ${styles.top}`}
         >
           {title}
-          <span className={styles.dot}>.</span>
+          {dot ? <span className={styles.dot}>.</span> : null}
         </animated.div>
         <div className={`w-full inline-block ${border ? '' : 'invisible'}`}>
           <animated.div
@@ -51,7 +52,7 @@ const MintingStage = ({
               className={`${styles.title} ${styles.bottom}`}
             >
               {title}
-              <span className={styles.dot}>.</span>
+              {dot ? <span className={styles.dot}>.</span> : null}
             </animated.div>
             <div className={`w-full inline-block ${border ? '' : 'invisible'}`}>
               <animated.div

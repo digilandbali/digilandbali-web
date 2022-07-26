@@ -40,6 +40,7 @@ const NFTFragmentSection = () => {
             quotas will be renewes every year for the next 58 years on 31 December 23:59:59 (UTC+8)."
         imageUrl="/Limabeach/nft-fragment.png"
         imageAlt="NFT Fragment image illustration"
+        dot={false}
       />
     </div>
   );
