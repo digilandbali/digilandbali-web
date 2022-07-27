@@ -79,7 +79,10 @@ const MintingStageSection = () => {
         <h1 className="text-white text-[16px] tablet:text-[24px] desktop:text-[32px]">
           Are you interested? {isDesktop ? '' : <br />}Mint Now!
         </h1>
-        <button className="min-w-max text-white uppercase px-6 py-4" disabled>
+        <button
+          className="min-w-max text-white uppercase px-6 py-4"
+          disabled={!process.env.NODE_ENV === 'development'}
+        >
           Go to minting page
         </button>
       </div>

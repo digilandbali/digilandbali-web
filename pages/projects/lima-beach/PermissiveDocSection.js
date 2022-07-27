@@ -25,12 +25,12 @@ const PermissiveDocSection = () => {
           <div className={sharedStyles.sectionTitleBig}>
             Permissive Document<span className={sharedStyles.titleDot}>.</span>
           </div>
-          <div className={styles.linkWrapper}>
+          {/* <div className={styles.linkWrapper}>
             <Import color="#BBCDFB" variant="Linear" size={24} />
             <a href="" style={{color: '#BBCDFB'}}>
               Download Set of Document
             </a>
-          </div>
+          </div> */}
         </animated.div>
         <div className="w-full inline-block">
           <animated.div
@@ -106,12 +106,12 @@ const PermissiveDocSection = () => {
             metadata as an ERC-1155 with a Timeshare Agreement document.
           </div>
         </div>
-        <div className={styles.linkWrapperInvisible}>
+        {/* <div className={styles.linkWrapperInvisible}>
           <Import color="#BBCDFB" variant="Linear" size={24} />
           <a href="" style={{color: '#BBCDFB'}}>
             Download Set of Document
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

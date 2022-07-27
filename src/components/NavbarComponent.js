@@ -53,7 +53,13 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
 
         <div className="link flex gap-9 justify-center w-[50%]">
           <Link href="/#home">home</Link>
-          <Link href="">whitepaper</Link>
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1TCMsMaM9lTXmywLc_rCW01XHw8R6OJms/view?usp=sharin"
+            rel="noopener noreferrer"
+          >
+            whitepaper
+          </a>
           <div className="dropdown-menu relative cursor-pointer">
             <div className="flex items-center gap-2">
               project
@@ -94,7 +100,7 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
           </div> */}
           {pathname[1] != 'minting' ? (
             <Link href="/minting/lima-beach" passHref>
-              <button disabled>
+              <button disabled={!process.env.NODE_ENV === 'development'}>
                 <span>mint yours</span>
               </button>
             </Link>
@@ -152,9 +158,13 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
           <Link href="/#home" passHref>
             <div onClick={() => closeNavbar()}>home</div>
           </Link>
-          <Link href="">
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1TCMsMaM9lTXmywLc_rCW01XHw8R6OJms/view?usp=sharin"
+            rel="noopener noreferrer"
+          >
             <div onClick={() => closeNavbar()}>whitepaper</div>
-          </Link>
+          </a>
           <div>
             <div>projects</div>
             <div>
@@ -194,7 +204,14 @@ const NavbarComponent = ({onConnect, walletAddress, isOpenNav}) => {
             </div>
           </div> */}
           <Link href="/minting/lima-beach" passHref>
-            <div onClick={e => e.preventDefault()} disabled>
+            <div
+              onClick={
+                !process.env.NODE_ENV === 'development'
+                  ? e => e.preventDefault()
+                  : () => closeNavbar()
+              }
+              disabled={!process.env.NODE_ENV === 'development'}
+            >
               go to mint page
             </div>
           </Link>
