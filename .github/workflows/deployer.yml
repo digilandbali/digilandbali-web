@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     environment: testnet
     env:
+      NODE_ENV: development
       NEXT_PUBLIC_ALCHEMY_URL: '${{ secrets.NEXT_PUBLIC_ALCHEMY_URL }}'
       NEXT_PUBLIC_LBSF_CONTRACT_ADDRESS: '${{ secrets.NEXT_PUBLIC_LBSF_CONTRACT_ADDRESS }}'
       NEXT_PUBLIC_USDC_CONTRACT_ADDRESS: '${{ secrets.NEXT_PUBLIC_USDC_CONTRACT_ADDRESS }}'
